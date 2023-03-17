@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CustomTitleToolbar" parent="TextAppearance.Material3.TitleLarge">
+        <item name="fontFamily">@font/concertone_regular</item>
+    </style>
+</resources>
