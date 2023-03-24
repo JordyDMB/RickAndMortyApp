@@ -8,7 +8,7 @@ import com.hey.rickandmortyappexample.domain.model.character.Character
 class GetCharactersUseCase(private val context: Context) {
 
     suspend operator fun invoke() : MutableList<Character> {
-        val response = CharacterRepository.getCharactersFromLocal()
+        val response = CharacterRepository.getCharactersFromLocal(context)
         if (response.size>0){
             return response
         }

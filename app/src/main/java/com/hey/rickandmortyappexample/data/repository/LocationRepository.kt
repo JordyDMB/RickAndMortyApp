@@ -15,6 +15,8 @@ import com.hey.rickandmortyappexample.domain.model.location.Location
 
 object LocationRepository {
 
+
+
     suspend fun getLocationsFromServer(context: Context):MutableList<Location>{
         return when (val response = LocationsApiService.getLocations()){
             is ApiResponse.Data -> {
@@ -28,7 +30,10 @@ object LocationRepository {
     }
 
     suspend fun getLocationsFromLocal() : MutableList<Location>{
+
         return mutableListOf()
     }
+
+
 
 }

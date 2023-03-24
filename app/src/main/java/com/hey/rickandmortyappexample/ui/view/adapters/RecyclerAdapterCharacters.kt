@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.RequestManager
 import com.hey.rickandmortyappexample.R
 import com.hey.rickandmortyappexample.databinding.RowCharacterBinding
 import com.hey.rickandmortyappexample.domain.model.character.Character

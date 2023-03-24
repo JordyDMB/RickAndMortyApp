@@ -3,6 +3,7 @@ package com.hey.rickandmortyappexample.domain.model.character
 import android.content.Context
 import android.graphics.Bitmap
 import android.os.Parcelable
+import com.hey.rickandmortyappexample.data.db.entity.character.CharacterEntity
 import com.hey.rickandmortyappexample.domain.useCase.GetCharacterImageUseCase
 import kotlinx.parcelize.Parcelize
 
@@ -14,8 +15,8 @@ data class Character(
     var species : String = "",
     var type : String = "",
     var gender : String = "",
-    var origin : Origin?,
-    var location : LocationMin?,
+    var origin : Origin,
+    var location : LocationMin,
     var image : String = "",
     var episode : MutableList<String> =  mutableListOf(),
     var url : String = "",
@@ -29,3 +30,7 @@ data class Character(
         return this.bitmap
     }
 }
+
+fun CharacterEntity.toDomain() = Character(id, name, status, species,
+    type, gender, origin.toDomain(), location.toDomain(),
+    image, episode, url, created, null, null)
